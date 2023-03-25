@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <title>Comics</title>
+</head>
+<body>
+
+        <h2 id="header2">Animation Final Project</h2>
+        <button id="btnFwd" class="btnFwd" >Continue</button>
+        <button id="btnBack" class="btnBack">Back</button>
+
+
+    <div class="book">
+        <div class="front-cover">
+        </div>
+
+        <div class="page" id="page2">
+            <img src="C:\Users\mxand\Downloads\attachments\image0.jpeg">
+        </div>
+        <div class="page" id="page3">
+            <img src="C:\Users\mxand\Downloads\attachments\image1.jpeg">
+
+        </div>
+        <div class="page" id="page4">
+            <img src="C:\Users\mxand\Downloads\attachments\image2.jpeg">
+
+        </div>
+        <div class="page" id="page5">
+            <img src="C:\Users\mxand\Downloads\attachments\image3.jpeg">
+
+        </div>
+        <div class="page" id="page6">
+            <img src="C:\Users\mxand\Downloads\attachments\image4.jpeg">
+
+        </div>
+        <div class="page" id="page7">
+            <img src="C:\Users\mxand\Downloads\attachments\image5.jpeg">
+
+        </div>
+        <div class="page" id="page8">
+            <img src="C:\Users\mxand\Downloads\attachments\image6.jpeg">
+
+        </div>
+        <div class="page" id="page9">
+            <img src="C:\Users\mxand\Downloads\attachments\image7.jpeg">
+
+        </div>
+        <div class="page" id="page10">
+            <img src="C:\Users\mxand\Downloads\attachments\image8.jpeg">
+
+        </div>
+        <div class="page" id="page11">
+            <img src="C:\Users\mxand\Downloads\attachments\image9.jpeg">
+
+        </div>
+        <div class="page" id="page12">
+            <img src="C:\Users\mxand\Downloads\attachments\image11.jpeg">
+
+        </div>
+        <div class="back-cover"></div>
+    </div>
+
+    <script>
+        
+        var button = document.querySelector('.btnFwd');
+
+        var idContinue = document.getElementById("btnFwd");
+        var idBack = document.getElementById("btnBack");
+
+        var buttonTwo = document.querySelector('.btnBack');
+        var frontCover = document.querySelector('.front-cover');
+        var page = document.querySelector('.page');
+        var pages = document.querySelector('#page1');
+
+        var counter = 0;
+
+        //var classTag = 'myClass';
+        //var foward = false;
+
+        idContinue.onclick = function addCount() {
+            counter++;
+            foward = true;
+            if(counter > 12) {
+                counter = 12;
+            };
+            console.log(counter);
+            console.log(foward);
+        }
+
+        idBack.onclick = function subCount() {
+            counter--;
+            foward = false;
+            if(counter < 0) {
+                counter = 0;
+            };
+            console.log(counter);
+            console.log(foward);
+        }
+
+        buttonTwo.addEventListener('click',  () => {
+            if(counter == 0) {
+                if(foward == false) {
+                    frontCover.classList.add('myClass3');
+                    frontCover.classList.remove('myClass');
+                } 
+                
+            } else if(counter == 1) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+                
+            } else if (counter == 2) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+
+            } else if (counter == 3) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+            } else if(counter == 4) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+                
+            } else if (counter == 5) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+
+            } else if (counter == 6) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+            } else if(counter == 7) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+                
+            } else if (counter == 8) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+
+            } else if (counter == 9) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+            } else if(counter == 10) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+                
+            } else if (counter == 11) {
+                if(foward == false) {
+                    document.querySelector(`#page${counter+1}`).classList.add('myClass3');
+                    document.querySelector(`#page${counter+1}`).classList.remove('myClass');
+                } 
+
+            }
+        });
+           
+        button.addEventListener('click',  () => {
+            if(counter == 1) {
+                if(foward == true) {
+                    frontCover.classList.add('myClass');
+                    frontCover.classList.remove('myClass3');
+                } 
+                
+            } else if (counter == 2) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+
+            } else if (counter == 3) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+            } else if (counter == 4) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+
+            } else if (counter == 5) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+            } else if (counter == 6) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+
+            } else if (counter == 7) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+            } else if (counter == 8) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+
+            } else if (counter == 9) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+            } else if (counter == 10) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+
+            } else if (counter == 11) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+            }  else if (counter == 12) {
+                if(foward == true) {
+                    document.querySelector(`#page${counter}`).classList.add('myClass');
+                    document.querySelector(`#page${counter}`).classList.remove('myClass3');
+                } 
+            }})
+
+    </script>
+
+</body>
+</html>
